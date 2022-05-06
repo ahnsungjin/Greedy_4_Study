@@ -30,3 +30,14 @@ def test_3_3():
     min_val = min(n)
     ans = max(ans, min_val)
   return ans
+
+def test_3_4(): 
+  N, K = map(int, input().split())
+  ans = 0
+  while N!=1: 
+    if N%K == 0: 
+      N = N/K
+    else: 
+      N = N-1
+    ans = ans+1
+  return ans
